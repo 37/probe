@@ -1,17 +1,18 @@
 <MainScreen>:
-        BoxLayout:
-                orientation: 'vertical'
-                size: root.width, root.height
-                Image:
-                        source: 'assets/46d8cUj.png'
-                        anim_delay: 0.05
-                        size_hint: 1, 0.5
+        orientation: 'vertical'
+        size: root.width, root.height
+        active_label: label_display
+        RelativeLayout:
+                color: [1,1,1,1]
                 Label:
                         id: label_display
-                        text: 'Welcome, Prometheus is alive.'
+                        text: 'Prometheus is alive.'
+                        color: [1,1,1,1]
                         font_size: 30
-                        size_hint: 1, 2.2
-                Button:
-                        text: 'click to trip sensor.'
-                        size_hint: 1, 0.3
-                        on_release: app.root.ChangeBtn()
+                        size_hint: 0, 0
+                        center_x: self.parent.width/2
+                        center_y: self.parent.height/2
+        Button:
+                text: 'click to trip sensor.'
+                size_hint: 1, 0.3
+                on_release: app.root.Animate()
