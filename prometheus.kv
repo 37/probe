@@ -1,0 +1,17 @@
+<MainScreen>:
+        BoxLayout:
+                orientation: 'vertical'
+                size: root.width, root.height
+                Image:
+                        source: 'assets/46d8cUj.png'
+                        anim_delay: 0.05
+                        size_hint: 1, 0.5
+                Label:
+                        id: label_display
+                        text: 'Welcome, Prometheus is alive.'
+                        font_size: 30
+                        size_hint: 1, 2.2
+                Button:
+                        text: 'click to trip sensor.'
+                        size_hint: 1, 0.3
+                        on_release: app.root.ChangeBtn()
